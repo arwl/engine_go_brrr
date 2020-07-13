@@ -18,11 +18,8 @@ int load_shader(char* filename)
         }
         buffer[length] = '\0'; // Add string terminator
     } else {
-        fprintf(stderr, "Could not load shader file at %s\n", filename);
-    }
-
-    if (buffer) {
-        printf("%s", buffer);
+        fprintf(stderr, "Err: Could not load shader file at %s\n", filename);
+        return 1;
     }
 
     return 0;
